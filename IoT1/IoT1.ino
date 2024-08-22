@@ -40,14 +40,16 @@ void loop() {
   digitalWrite(led, LOW);//apagando led
   if (ReadBtn() != '\0'){// si se preciona algo se agrega a entrada
     entrada = entrada + press;
+    Serial.println(entrada);
   }
-  Serial.println(entrada);
+  
 
-  if (entrada.length() == 3){// si la entrada ya es igual a 3 se verifica
+  if (entrada.length() == pass.length()){// si la entrada ya es igual a 3 se verifica
     if (entrada == pass){// si la contraseña es correcta enciende el led
       digitalWrite(led, HIGH);
       delay(1000);
       entrada = "";
+      Serial.println("Abierto");
     }
     else {//si no es correcta manda dos parpadeos indicativos
       digitalWrite(led, HIGH);
@@ -59,6 +61,7 @@ void loop() {
       digitalWrite(led, LOW);
       delay(100);
       entrada = "";
+      Serial.println("Clave incorrecta");
     }
   }
 }
