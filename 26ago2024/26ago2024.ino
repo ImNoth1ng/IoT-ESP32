@@ -1,4 +1,4 @@
-#define pmt 36
+#define pmt 33
 
 void setup() {
   Serial.begin(115200);
