@@ -9,7 +9,7 @@ void setup() {
 void loop() {
   // Si hay datos disponibles en el puerto serial USB, los lee y los envía a Serial2
   if (Serial.available() > 0) {
-    String inputString = "PC-2: "+ Serial.readString() + "\n";
+    String inputString = "PC-1: "+ Serial.readString() + "\n";
     Serial2.write(inputString.c_str()); // Convierte el String a const char* y lo envía
   }
 
