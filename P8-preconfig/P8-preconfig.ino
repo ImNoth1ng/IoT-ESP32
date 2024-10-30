@@ -1,3 +1,7 @@
+//TODO
+//Poner conexion a ADAFRUIT
+//Cambiar el map a la inversa
+
 // Definición de pines
 const int ldrPin = 36; // Pin analógico donde está conectado el LDR
 const int motorOpenPin = 12; // Pin digital para abrir la persiana
